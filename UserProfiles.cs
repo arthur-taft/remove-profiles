@@ -5,9 +5,9 @@ using Microsoft.Win32;
 
 namespace remove_profiles
 {
-    public record struct UserProfiles
+    public class UserProfiles
     {
-        private string profileRegPath = @"SOFTWARE\Microsoft\Windows NT\Current Version\ProfileList";
+        private const string profileRegPath = @"SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList";
         private RegistryKey? profileListKey = Registry.LocalMachine.OpenSubKey(profileRegPath);
     }
 }
